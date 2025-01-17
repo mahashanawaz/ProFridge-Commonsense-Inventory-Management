@@ -27,7 +27,7 @@ needs_restock(Item) :- priority(Item, medium), food(Item, Quantity, _), Quantity
 
 
 % Remainder before expiration prior 3 days.
-expiring_soon(item) :- food(Item, _, ExpirationDays), ExpirationDays =< 1.
+expiring_soon(Item) :- food(Item, _, ExpirationDays), ExpirationDays =< 3.
 
 
 % Add product to grocery list if it expires in 1 day or less without considering its priority.
